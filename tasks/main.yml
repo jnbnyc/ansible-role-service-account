@@ -1,0 +1,24 @@
+---
+
+- name: service-account | Ensuring service account group exists
+  become: yes
+  group:
+    name: {{service_account_config.group}}
+    system: yes
+    state: present
+  tags:
+    - service-account
+
+- name: service-account | Ensuring service account user exists
+  become: yes
+  user:
+    name: "{{service_account_config.user}}"
+    comment: "{{service_account_config.comment}}"
+    group: "{{service_account_config.group}}"
+    groups: "{{service_account_config.groups}}"
+    append: yes
+    password: "*"
+    update_password: on_create
+    system: yes
+  tags:
+    - service-account

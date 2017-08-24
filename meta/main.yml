@@ -1,0 +1,20 @@
+---
+
+allow_duplicates: yes
+dependencies: []
+
+galaxy_info:
+  author: jnbnyc
+  description: This role creates a system group and user for other roles.
+  license: MIT
+  min_ansible_version: 2.3.2.0
+
+  # platforms is a list of platforms, and each platform has a name and a list of versions.
+  #
+  # platforms:
+  # - name: Fedora
+  #   versions:
+  #   - all
+  #   - 25
+
+  galaxy_tags: []

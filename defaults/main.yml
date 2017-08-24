@@ -1,0 +1,10 @@
+---
+
+# service_account_opts: {}
+service_account_defaults:
+  user:
+  group:
+  groups: []
+  comment: ""
+
+service_account_config: "{{ service_account_defaults | combine(service_account_opts) }}"
