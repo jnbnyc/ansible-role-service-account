@@ -3,7 +3,7 @@
 - name: service-account | Ensuring service account group exists
   become: yes
   group:
-    name: {{service_account_config.group}}
+    name: "{{service_account_config.group}}"
     system: yes
     state: present
   tags:
